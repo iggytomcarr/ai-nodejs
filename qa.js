@@ -28,11 +28,11 @@ export const docsFromYTVideo = async (video) => {
 }
 
 export const docsFromPDF = () => {
-  const loader = new PDFLoader('xbox.pdf')
+  const loader = new PDFLoader('Computer.Music.June.2020.PDF')
   return loader.loadAndSplit(
     new CharacterTextSplitter({
       separator: '. ',
-      chunkSize: 2500,
+      chunkSize: 5000,
       chunkOverlap: 200,
     })
   )
@@ -56,7 +56,7 @@ const query = async () => {
       {
         role: 'assistant',
         content:
-          'You are a helpful AI assistant. Answser questions to your best ability.',
+          'You are a helpful AI assistant. Answer questions to your best ability.',
       },
       {
         role: 'user',
